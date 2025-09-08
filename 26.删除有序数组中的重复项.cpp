@@ -5,21 +5,23 @@
  */
 
 // @lc code=start
-class Solution {
+class Solution
+{
 public:
-    int removeDuplicates(vector<int>& nums) {
-        int num=0,n=nums.size();
-        if(n==0) return 0;
-        for(int i=1;i<n;i++)
+    int removeDuplicates(vector<int> &nums)
+    {
+        int num = 0, n = nums.size();
+        if (n == 0)
+            return 0;
+        for (int i = 1; i < n; i++)
         {
-            if(nums[num]!=nums[i])
+            if (nums[num] != nums[i])
             {
                 num++;
-                nums[num]=nums[i];
+                nums[num] = nums[i];
             }
         }
-        return num+1;
+        return num + 1;
     }
 };
 // @lc code=end
-
